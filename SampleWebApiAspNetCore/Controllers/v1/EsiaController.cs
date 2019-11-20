@@ -22,7 +22,8 @@ namespace SampleWebApiAspNetCore.v1.Controllers
             new Person { Login="qwerty", Password="55555", Role = "user" }
         };
 
-        [HttpPost("/token")]
+        //[HttpPost("/token")]
+        [HttpPost(Name = nameof(Token))]
         public async Task Token()
         {
             var username = Request.Form["username"];
